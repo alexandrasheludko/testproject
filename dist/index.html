@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>КуражТур</title>
 	<meta name="description" content="main-page - description">
-	<meta http-equiv="X-UA-Compatible" content="IE = edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="img/logo-og.png">
 	<link rel="icon" href="img/favicon.png">	
@@ -13,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
 </head>
 <body>
 	<header class="header">
@@ -23,11 +22,11 @@
 			</span>
 			<div class="user-header">
 				<div class="contact-info">
-					<div class="address">
+					<div class="contact-info__address">
 						<i class="fas fa-map-marker-alt"></i>
 						<span>г. Харьков, ул. Мироносицкая 10а</span>
 					</div>
-					<div class="tel">
+					<div class="contact-info__tel">
 						<i class="fas fa-phone"></i>
 						<span>+38 (099) 990-81-00</span> <span class="tel_mess">(viber, telegram)</span>
 					</div>
@@ -38,7 +37,7 @@
 				</div>
 				<nav class="nav">
 					<ul class="menu">
-						<li class="menu__li"><span class="menu__link">Главная<span></li>
+						<li class="menu__li"><span class="menu__link">Главная</span></li>
 							<li class="menu__li"><a href="#" class="menu__link">Туры<i class="fas fa-chevron-down"></i></a>
 								<ul class="dropMenu">
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Горящие туры</a></li>
@@ -54,7 +53,7 @@
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Авиабилеты</a></li>
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Визовая поддержка</a></li>
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Индивидуальный трансфер</a></li>
-									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Подарочные сертификаты</a></li>
+									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Подарочные<br> сертификаты</a></li>
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Бронирование отелей<br> и апартаментов</a></li>
 									<li class="dropMenu__li"><a href="#" class="dropMenu__link">Как забронировать и<br> оплатить тур</a></li>
 								</ul>
@@ -104,7 +103,7 @@
 				</div>
 			</div>
 		</div>
-		<main>
+		<main class="main">
 			<section class="offers">
 				<div class="offers__wrapper">
 					<div class="tabs_block">
@@ -258,25 +257,21 @@
 			<section class="section-form">
 				<div class="wrapper">
 					<div class="section-form__heading heading">Хочу предложения по туру</div>
-					<form class="form" method="post">
+					<form class="form" method="post" name="registration">
 						<div class="form__inp">
-							<input class="input input-name" type="text" name="name" required> 
-							<span class="bar"></span>
-							<label>Имя</label>
+							<input class="input input-name" type="text" name="name" placeholder="Имя">
+							<span class="bar"></span> 
 						</div>
 						<div class="form__inp">
-							<input class="input input-email" type="email" required>
+							<input class="input input-email" type="email" name="email" placeholder="Email">
 							<span class="bar"></span>
-							<label>Email</label>
 						</div>
 						<div class="form__inp">
-							<input type="tel" class="input input-tel" name="tel" id="tel" required>
-							<span class="bar"></span>
-							<label>Телефон</label>
+							<input  class="input input-tel" type="tel" name="tel" id="tel" placeholder="Телефон">
+							<span class="bar"></span> 
 						</div>
 						<div class="form__inp">
 							<select class="input input-select" name="select">
-								<option value="">Страна тура</option>
 								<option value="Турция">Турция</option>
 								<option value="Египет">Египет</option>
 								<option value="Шри-Ланка">Шри-Ланка</option>
@@ -284,7 +279,7 @@
 								<i class="fas fa-chevron-down"></i>
 							</select>
 						</div>
-						<button type="submit" class="form__btn-offer btn-offer btn" href="#"><span>Получить предложение</span></button>
+						<button type="submit" class="form__btn-offer btn-offer btn"><span>Получить предложение</span></button>
 					</form>
 				</div>
 			</section>
@@ -323,10 +318,14 @@
 						</div>
 						<div class="serviceMenu__list">
 							<h3 class="serviceMenu__h3">Контакты</h3>
-							<ul class="serviceMenu__ul">
-								<li><span class="serviceMenu__span">г. Харьков, ул. Лермонтовская 10а</span></li>
-								<li><span class="serviceMenu__span" href="#">+38 (099) 990-81-00</span></li>
-							</ul>
+							<div class="serviceMenu__div">
+								<div class="serviceMenu__address">
+									<i class="fas fa-map-marker-alt"></i><span class="serviceMenu__span">г. Харьков, ул. Лермонтовская 10а</span>
+								</div>
+								<div class="serviceMenu__tel">
+									<i class="fas fa-phone"></i><span class="serviceMenu__span">+38 (099) 990-81-00</span>
+								</div>
+							</div>
 							<hr class="aboutF__hr">
 							<div class="social-icons">
 								<a class="sb facebook" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -337,10 +336,9 @@
 				</div>
 			</div>
 		</footer>
-		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="js/libs.min.js"></script>
-		<script src="js/common.js"></script>
 		<script src="js/dm-tabs.js"></script>
+		<script src="js/form-validation.js"></script>
+		<script src="js/common.js"></script>
 	</body>
 	</html>
